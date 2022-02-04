@@ -1,10 +1,21 @@
-local components = require("common_components")
-local Player = class("Player")
+shapes = require("shapes")
 
-function Player:init(args)
-    self.position = {200, -125}
-    self.vertices = {x1 = 50, x2 = 50, y1 = 100, y2 = 50, z1 = 75, z2 = 100}
+
+Player = {
+    position = {},
+    size = 0,
+    width = 0,
+    height = 0,
+    vertices = {}
+}
+
+function Player:init(table)
+    table = table or {}
+    setmetatable(table, self)
+    self.__index = self
+    return table
 end
+
 
 function Player:draw(dt)
     love.graphics.setColor(1,1,1,1)
