@@ -1,4 +1,4 @@
-shapes = require("shapes")
+shapes = require("lib/shapes")
 
 
 Player = {
