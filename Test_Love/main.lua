@@ -9,10 +9,7 @@ function love.load()
         height = 15,
         vertices = {}
     })
-    print(main_player.position, main_player.size, main_player.width, main_player.height, main_player.vertices)
     main_player.vertices = IsoscelesTriangle(main_player.position, main_player.width, main_player.height)
-    print(dump(main_player.position,main_player.vertices))
-    print(dump(main_player.vertices))
 end
 
 function love.update(dt)
@@ -21,6 +18,5 @@ end
 
 function love.draw()
    local dt = love.timer.getDelta()
-  -- main_player:draw(dt)
-
+   main_player:draw(dt)
 end

@@ -11,7 +11,7 @@ function IsoscelesTriangle(position, width, height, rotation)
     local x1, y1 = position.x, position.y - heightRadius
     local x2, y2 = position.x + widthRadius, position.y + heightRadius
     local x3, y3 = position.x - widthRadius, y2
-    
+    return {x1, y1, x2, y2, x3, y3}
 end 
 
 
