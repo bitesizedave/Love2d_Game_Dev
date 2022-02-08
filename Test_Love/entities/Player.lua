@@ -7,7 +7,7 @@ Player = {
     width = 0,
     height = 0,
     vertices = {},
-    angle = 0
+    direction = 0 -- in math.rad(degrees)
 }
 
 function Player:init(table)
@@ -23,9 +23,9 @@ function Player:draw(dt)
     love.graphics.polygon("fill", self.vertices)
 end
 
-function Player:rotate(angle)
-    main_player.vertices = isoscelesTriangle(main_player.position, main_player.width, main_player.height, main_player.angle)
-    self.angle  = self.angle + angle
+function Player:rotate(direction)
+    main_player.vertices = isoscelesTridirection(main_player.position, main_player.width, main_player.height, main_player.direction)
+    self.direction  = self.direction + direction
 end
 
 
